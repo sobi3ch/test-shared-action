@@ -1,0 +1,13 @@
+name: Test action from github reposotory
+
+on:
+  workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test custom action
+        uses: sobi3ch/.github//actions/test-workflow@main
